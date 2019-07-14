@@ -8,6 +8,16 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        User user = new User.Builder()
+                .name("Jan")
+                .lastname("Kowalski")
+                .active(true)
+                .city("Torun")
+                .password("bassword")
+                .postalCode("87-100")
+                .build();
+
+        System.out.println(user.toString());
+
     }
 }
